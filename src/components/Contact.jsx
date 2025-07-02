@@ -6,34 +6,48 @@ import {
   Send,
   Github,
   Linkedin,
-  Twitter,
+  Instagram,
+  Facebook,
 } from "lucide-react";
 
 const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "alex.johnson@example.com",
-    href: "mailto:alex.johnson@example.com",
+    value: "naflanm084@gmail.com",
+    href: "mailto:naflanm084@gmail.com",
   },
   {
     icon: Phone,
     label: "Phone",
-    value: "+1 (555) 123-4567",
-    href: "tel:+15551234567",
+    value: "+94 766703616",
+    href: "tel:+94766703616",
   },
   {
     icon: MapPin,
     label: "Location",
-    value: "San Francisco, CA",
+    value: "Kalawewa kekirawe, Sri Lanka",
     href: null,
   },
 ];
 
 const socialLinks = [
-  { icon: Github, href: "https://github.com", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-  { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
+  { icon: Github, href: "https://github.com/Naflan-MNM", label: "GitHub" },
+  {
+    icon: Linkedin,
+    href: "https://www.linkedin.com/in/naflan-mohammed/",
+    label: "LinkedIn",
+  },
+  {
+    icon: Instagram,
+    href: "https://www.instagram.com/naflan_mnm", // replace with your actual link
+    label: "Instagram",
+  },
+  {
+    icon: Facebook,
+    href: "https://web.facebook.com/naflan.mohamednaflan", // replace with your actual link
+    label: "Facebook",
+  },
 ];
 
 function Contact() {
