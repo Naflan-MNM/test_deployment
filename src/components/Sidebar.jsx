@@ -35,13 +35,13 @@ function Sidebar({ activeSection, onNavigate, isMobileOpen }) {
       ${isMobileOpen ? "translate-x-0" : "translate-x-full lg:translate-x-0"}
     `}
     >
-      <div className="flex flex-col h-full p-8">
+      <div className="flex flex-col  p-8">
         {/* Profile Section */}
-        <div className="text-center mb-8">
+        <div className="text-center mb-4">
           <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-emerald-500 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl font-bold">
-            AJ
+            NM
           </div>
-          <h2 className="text-xl font-semibold text-white">Alex Johnson</h2>
+          <h2 className="text-xl font-semibold text-white">Naflan Mohammed</h2>
           <p className="text-slate-400 text-sm mt-1">Full Stack Developer</p>
         </div>
 
@@ -97,7 +97,7 @@ function Sidebar({ activeSection, onNavigate, isMobileOpen }) {
 
         {/* Footer */}
         <div className="text-center text-xs text-slate-500 mt-6">
-          © 2025 Alex Johnson
+          © 2025 Naflan Mohammed
         </div>
       </div>
     </aside>

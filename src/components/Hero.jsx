@@ -18,7 +18,7 @@ function Hero() {
         {/* Main heading with gradient */}
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 opacity-0 animate-fade-in-up animation-delay-200">
           <span className="bg-gradient-to-r from-white via-blue-100 to-emerald-300 bg-clip-text text-transparent">
-            Alex Johnson
+            Naflan Mohammed
           </span>
         </h1>
 
@@ -46,10 +46,15 @@ function Hero() {
           >
             View My Work
           </button>
-          <button className="border border-slate-600 hover:border-emerald-400 text-slate-300 hover:text-emerald-400 px-8 py-4 rounded-full font-semibold transition-all duration-300 flex items-center justify-center space-x-2 hover:bg-emerald-400/10">
+          <a
+            href="/Portfolio/naflan-resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border border-slate-600 hover:border-emerald-400 text-slate-300 hover:text-emerald-400 px-8 py-4 rounded-full font-semibold transition-all duration-300 flex items-center justify-center space-x-2 hover:bg-emerald-400/10"
+          >
             <Download size={20} />
             <span>Download Resume</span>
-          </button>
+          </a>
         </div>
       </div>
 
