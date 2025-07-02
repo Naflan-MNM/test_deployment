@@ -9,6 +9,7 @@ import {
   Instagram,
   Facebook,
 } from "lucide-react";
+import emailjs from "@emailjs/browser";
 
 const contactInfo = [
   {
@@ -70,20 +71,29 @@ function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    try {
+      const result = await emailjs.send(
+        "service_jv9gz9t", // e.g., service_xxxxxxx
+        "template_j5hzwji", // e.g., template_xxxxxxx
+        formData,
+        "Rt5NPQKorEBkOweHN" // e.g., uBC1zxxxxxxx
+      );
 
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    });
+      console.log("SUCCESS!", result.text);
+      alert("Message sent successfully!");
+
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("FAILED...", error);
+      alert("Failed to send message. Please try again.");
+    }
+
     setIsSubmitting(false);
-
-    // Show success message (you can implement this with a toast library)
-    alert("Message sent successfully!");
   };
 
   return (
