@@ -18,7 +18,7 @@ function Hero() {
         {/* Main heading with gradient */}
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 opacity-0 animate-fade-in-up animation-delay-200">
           <span className="bg-gradient-to-r from-white via-blue-100 to-emerald-300 bg-clip-text text-transparent">
-            Naflan Mohammed
+            Naflan M.N.M
           </span>
         </h1>
 
