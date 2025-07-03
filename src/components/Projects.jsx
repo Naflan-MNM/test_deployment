@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { ExternalLink, Github, ArrowRight } from "lucide-react";
 
 const projects = [
@@ -49,6 +49,16 @@ const projects = [
 ];
 
 function Projects() {
+  const [showAll, setShowAll] = useState(false);
+
+  const handleToggle = () => {
+    setShowAll((prev) => !prev);
+  };
+
+  const displayedProjects = showAll
+    ? projects
+    : projects.filter((p) => p.featured);
+
   return (
     <section id="projects" className="py-20 px-6 lg:px-12">
       <div className="max-w-6xl mx-auto">
@@ -64,130 +74,80 @@ function Projects() {
           </p>
         </div>
 
-        {/* Featured Projects */}
+        {/* Projects Grid */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
-          {projects
-            .filter((project) => project.featured)
-            .map((project, index) => (
-              <div
-                key={index}
-                className="group bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50 overflow-hidden hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-[1.02]"
-              >
-                <div className="relative overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
+          {displayedProjects.map((project, index) => (
+            <div
+              key={index}
+              className="group bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50 overflow-hidden hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-[1.02]"
+            >
+              <div className="relative overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
 
-                  {/* Overlay Links */}
-                  <div className="absolute top-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <a
-                      href={project.github}
-                      className="p-2 bg-slate-800/90 text-white rounded-full hover:bg-slate-700 transition-colors duration-200"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Github size={20} />
-                    </a>
-                    <a
-                      href={project.live}
-                      className="p-2 bg-blue-600/90 text-white rounded-full hover:bg-blue-700 transition-colors duration-200"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <ExternalLink size={20} />
-                    </a>
-                  </div>
-                </div>
-
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors duration-200">
-                    {project.title}
-                  </h3>
-                  <p className="text-slate-300 mb-4 leading-relaxed">
-                    {project.description}
-                  </p>
-
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.technologies.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-3 py-1 bg-slate-700/50 text-emerald-400 rounded-full text-xs font-medium"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-
-                  <div className="flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-200 cursor-pointer">
-                    <span className="text-sm font-medium">View Details</span>
-                    <ArrowRight
-                      size={16}
-                      className="ml-2 group-hover:translate-x-1 transition-transform duration-200"
-                    />
-                  </div>
+                {/* Overlay Links */}
+                <div className="absolute top-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <a
+                    href={project.github}
+                    className="p-2 bg-slate-800/90 text-white rounded-full hover:bg-slate-700 transition-colors duration-200"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Github size={20} />
+                  </a>
+                  <a
+                    href={project.live}
+                    className="p-2 bg-blue-600/90 text-white rounded-full hover:bg-blue-700 transition-colors duration-200"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <ExternalLink size={20} />
+                  </a>
                 </div>
               </div>
-            ))}
-        </div>
 
-        {/* Other Projects */}
-        <div className="grid md:grid-cols-2 gap-6">
-          {projects
-            .filter((project) => !project.featured)
-            .map((project, index) => (
-              <div
-                key={index}
-                className="group bg-slate-800/30 backdrop-blur-sm p-6 rounded-xl border border-slate-700/50 hover:border-blue-500/30 transition-all duration-300 hover:bg-slate-800/50"
-              >
-                <div className="flex items-start justify-between mb-4">
-                  <h3 className="text-lg font-semibold text-white group-hover:text-blue-400 transition-colors duration-200">
-                    {project.title}
-                  </h3>
-                  <div className="flex space-x-2">
-                    <a
-                      href={project.github}
-                      className="p-1 text-slate-400 hover:text-white transition-colors duration-200"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Github size={18} />
-                    </a>
-                    <a
-                      href={project.live}
-                      className="p-1 text-slate-400 hover:text-blue-400 transition-colors duration-200"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <ExternalLink size={18} />
-                    </a>
-                  </div>
-                </div>
-
-                <p className="text-slate-300 text-sm mb-4 leading-relaxed">
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors duration-200">
+                  {project.title}
+                </h3>
+                <p className="text-slate-300 mb-4 leading-relaxed">
                   {project.description}
                 </p>
 
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="px-2 py-1 bg-slate-700/50 text-emerald-400 rounded text-xs"
+                      className="px-3 py-1 bg-slate-700/50 text-emerald-400 rounded-full text-xs font-medium"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
+
+                <div className="flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-200 cursor-pointer">
+                  <span className="text-sm font-medium">View Details</span>
+                  <ArrowRight
+                    size={16}
+                    className="ml-2 group-hover:translate-x-1 transition-transform duration-200"
+                  />
+                </div>
               </div>
-            ))}
+            </div>
+          ))}
         </div>
 
-        {/* View All Projects Button */}
+        {/* Toggle Button */}
         <div className="text-center mt-12">
-          <button className="bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105">
-            View All Projects
+          <button
+            onClick={handleToggle}
+            className="bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+          >
+            {showAll ? "View Less Projects" : "View All Projects"}
           </button>
         </div>
       </div>
