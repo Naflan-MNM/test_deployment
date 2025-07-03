@@ -8,7 +8,7 @@ import {
   Mail,
   Github,
   Linkedin,
-  Twitter,
+  Instagram,
 } from "lucide-react";
 
 const navigationItems = [
@@ -21,9 +21,17 @@ const navigationItems = [
 ];
 
 const socialLinks = [
-  { icon: Github, href: "https://github.com", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-  { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
+  { icon: Github, href: "https://github.com/Naflan-MNM", label: "GitHub" },
+  {
+    icon: Linkedin,
+    href: "https://www.linkedin.com/in/naflan-mohammed/",
+    label: "LinkedIn",
+  },
+  {
+    icon: Instagram,
+    href: "https://www.instagram.com/naflan_mnm",
+    label: "Instagram",
+  },
 ];
 
 function Sidebar({ activeSection, onNavigate, isMobileOpen }) {
