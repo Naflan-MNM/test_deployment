@@ -1,19 +1,26 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { School, CalendarDays, BadgeCheck } from "lucide-react";
 
 const educationData = [
   {
-    degree: "BSc in Information Communication Technology",
+    degree: "BICT Hons Special In Software Engineering",
     institution: "University of Sri Jayewardenepura",
-    duration: "2020 - 2025",
+    duration: "2021 - 2025",
     gpa: "GPA: 3.61",
   },
   {
     degree: "G.C.E. Advanced Level",
-    institution: "Zahira College",
+    institution: "MT/Ajmeer National School",
     duration: "2017 - 2019",
-    gpa: "Commerce Stream",
+    gpa: "Z-Score: 1.8",
   },
 ];
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0 },
+};
 
 const Education = () => {
   return (
@@ -25,14 +32,36 @@ const Education = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-emerald-400 mx-auto rounded-full"></div>
         </div>
+
         <div className="space-y-6">
           {educationData.map((edu, index) => (
-            <div key={index} className="bg-gray-800 p-4 rounded-xl shadow-md">
-              <h3 className="text-xl font-semibold">{edu.degree}</h3>
-              <p className="text-gray-300">{edu.institution}</p>
-              <p className="text-sm text-gray-400">{edu.duration}</p>
-              <p className="text-sm text-gray-400">{edu.gpa}</p>
-            </div>
+            <motion.div
+              key={index}
+              variants={fadeInUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+              whileHover={{ scale: 1.01 }}
+              className="bg-gray-800 p-6 rounded-xl "
+            >
+              <h3 className="text-xl font-semibold text-white">{edu.degree}</h3>
+
+              <p className="flex items-center gap-2 text-gray-300 mt-2">
+                <School size={18} className="text-emerald-400" />
+                {edu.institution}
+              </p>
+
+              <p className="flex items-center gap-2 text-sm text-gray-400 mt-1">
+                <CalendarDays size={16} className="text-blue-400" />
+                {edu.duration}
+              </p>
+
+              <p className="flex items-center gap-2 text-sm text-gray-400 mt-1">
+                <BadgeCheck size={16} className="text-yellow-400" />
+                {edu.gpa}
+              </p>
+            </motion.div>
           ))}
         </div>
       </div>

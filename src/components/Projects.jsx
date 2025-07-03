@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { ExternalLink, Github, ArrowRight } from "lucide-react";
 
 const projects = [
@@ -80,9 +80,7 @@ function Projects() {
   const [viewDetail, setViewDetail] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
 
-  const handleToggle = () => {
-    setShowAll((prev) => !prev);
-  };
+  const handleToggle = () => setShowAll((prev) => !prev);
 
   const displayedProjects = showAll
     ? projects
@@ -91,7 +89,6 @@ function Projects() {
   return (
     <section id="projects" className="py-20 px-6 lg:px-12">
       <div className="max-w-6xl mx-auto">
-        {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
             Featured Projects
@@ -103,7 +100,6 @@ function Projects() {
           </p>
         </div>
 
-        {/* Projects Grid */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           {displayedProjects.map((project, index) => (
             <div
@@ -118,7 +114,6 @@ function Projects() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
 
-                {/* Overlay Links */}
                 <div className="absolute top-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <a
                     href={project.github}
@@ -162,9 +157,9 @@ function Projects() {
                 </p>
 
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.map((tech) => (
+                  {project.technologies.map((tech, i) => (
                     <span
-                      key={tech}
+                      key={`${tech}-${i}`}
                       className="px-3 py-1 bg-slate-700/50 text-emerald-400 rounded-full text-xs font-medium"
                     >
                       {tech}
@@ -190,7 +185,6 @@ function Projects() {
           ))}
         </div>
 
-        {/* Overlay for Detail View (outside map!) */}
         {viewDetail && selectedProject && (
           <div className="fixed inset-y-0 left-0 right-80 bg-gray-900/90 z-50 flex items-center justify-center p-6">
             <div className="relative max-w-2xl w-full bg-slate-800 rounded-2xl p-6 shadow-lg max-h-[90vh] overflow-y-auto">
@@ -210,9 +204,9 @@ function Projects() {
               </p>
 
               <div className="flex flex-wrap gap-2 mb-6">
-                {selectedProject.technologies.map((tech) => (
+                {selectedProject.technologies.map((tech, i) => (
                   <span
-                    key={tech}
+                    key={`${tech}-${i}`}
                     className="px-3 py-1 bg-slate-700/50 text-emerald-400 rounded-full text-xs font-medium"
                   >
                     {tech}
@@ -256,7 +250,6 @@ function Projects() {
           </div>
         )}
 
-        {/* Toggle Button */}
         <div className="text-center mt-12">
           <button
             onClick={handleToggle}
