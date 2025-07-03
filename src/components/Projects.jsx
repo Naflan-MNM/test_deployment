@@ -3,7 +3,33 @@ import { ExternalLink, Github, ArrowRight } from "lucide-react";
 
 const projects = [
   {
-    title: "Gexmoo – Full-Stack E-commerce Web Application",
+    title: "Seat Reservation System",
+    description:
+      "The Seat Reservation System is a full-stack web application designed to manage seat bookings within an organization. Built using React.js on the frontend and Node.js/Express on the backend, the system enables employees or trainees to book, cancel, and manage seat reservations based on their assigned working floor. The frontend interface is rich with features such as a date picker, drag-and-drop seat allocation, QR code generation for check-ins, and export functionalities for reports in PDF and CSV formats. Authentication is handled via Google Sign-In using OAuth2, and task-critical emails like confirmations and cancellations are sent via Nodemailer. On the backend, MongoDB is used to persist booking data, and sessions are managed securely using express-session. Admin users have capabilities to view seat usage, manage holidays, and export attendance records. This project gave me in-depth experience with integrating complex frontend components and building secure, scalable backend APIs for enterprise use.",
+    image:
+      "https://images.pexels.com/photos/590020/pexels-photo-590020.jpeg?auto=compress&cs=tinysrgb&w=800",
+    technologies: [
+      "React",
+      "Axios",
+      "Express",
+      "MongoDB",
+      "Nodemailer",
+      "Google Auth",
+      "REST APIs",
+      "React Router",
+      "Material UI",
+      "Express Session",
+      "JWT",
+      "Passport",
+      "Nodemailer",
+    ],
+    github: "https://github.com/Naflan-MNM/seat-reservation-system---frontend-",
+    github1: "https://github.com/Naflan-MNM/seat-reservation-system---backend-",
+    live: "https://www.linkedin.com/posts/naflan-mohammed_demo-video-seat-reservation-system-in-activity-7330520524428587008-kZjE?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD8GjgwB4RfDRAXUs_iHzK4murYbtVAtYr0",
+    featured: true,
+  },
+  {
+    title: "Gexmoo – E-commerce Web Application",
     description:
       "Gexmoo is a fully functional e-commerce platform built with the MERN stack. The frontend, developed using React, Vite, and Tailwind CSS, offers a fast, responsive user experience with seamless navigation via React Router and real-time feedback using React Toastify. The backend is powered by Node.js, Express, and MongoDB, with Mongoose for data modeling. It features secure user authentication with JWT and bcrypt, image uploading via Multer, and cloud storage integration with Cloudinary. The system ensures robust form validation, environment management using dotenv, and cross-origin communication with CORS. Gexmoo is designed to be scalable and maintainable, with a modular structure and well-documented codebase.",
     image:
@@ -21,42 +47,30 @@ const projects = [
       "dotenv",
       "cors",
     ],
-    github: "https://github.com/Naflan-MNM/seat-reservation-system---frontend-",
-    github1: "https://github.com/Naflan-MNM/seat-reservation-system---backend-",
+    github: "https://github.com/Naflan-MNM/GeXMoo",
     live: "d",
     featured: true,
   },
   {
-    title: "Task Management App",
+    title: "To-Do List Web App",
     description:
-      "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
+      "This is a responsive and user-friendly To-Do List web application developed using React and Material UI. It allows users to efficiently manage their daily tasks through a clean and modern interface. Key features include the ability to add, edit, and delete tasks, mark tasks as complete or incomplete, filter tasks based on their completion status, and search for tasks using keywords. The application also uses the browser’s local storage to ensure data persistence across sessions. Through this project, I gained practical experience in React component design, state management, and UI integration with Material UI. Additionally, I strengthened my skills in implementing reusable components and managing client-side storage for improved scalability and user experience.",
     image:
       "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=800",
-    technologies: ["Next.js", "JavaScript", "Supabase", "Socket.io"],
-    github: "https://github.com",
-    live: "https://example.com",
-    featured: true,
-  },
-  {
-    title: "Weather Dashboard",
-    description:
-      "A responsive weather dashboard that displays current conditions, forecasts, and weather maps with a beautiful, intuitive interface.",
-    image:
-      "https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800",
-    technologies: ["Vue.js", "Tailwind", "Weather API"],
-    github: "https://github.com",
-    live: "https://example.com",
+    technologies: ["React.JS", "JavaScript", "HTML", "Pure CSS"],
+    github: "https://github.com/Naflan-MNM/To-Do-List",
+    live: "https://www.linkedin.com/posts/naflan-mohammed_webdevelopment-fullstack-todolist-activity-7215244149212499968-GrOP?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD8GjgwB4RfDRAXUs_iHzK4murYbtVAtYr0",
     featured: false,
   },
   {
-    title: "Social Media Analytics",
+    title: " GPA Calculator Pro – University of Sri Jayewardenepura",
     description:
-      "An analytics dashboard for social media managers to track engagement, growth, and performance across multiple platforms.",
+      "GPA Calculator Pro is a mobile application developed using Flutter and Android Studio, specifically designed for students of the University of Sri Jayewardenepura. This app simplifies the process of calculating Grade Point Averages (GPA) and Cumulative GPA (CGPA) based on the university's unique grading system and academic structure. With an intuitive user interface and seamless performance, students can easily input their subject grades, credit values, and calculate accurate results instantly. The app supports semester-wise calculations, real-time GPA updates, and error handling to ensure data accuracy. It also provides options to save, reset, and review results for academic planning. This project enhanced my skills in cross-platform mobile development, state management in Flutter, and designing user-centric educational tools. It was built with a focus on usability, precision, and alignment with university policies, making it a valuable utility for fellow undergraduates..",
     image:
-      "https://images.pexels.com/photos/590020/pexels-photo-590020.jpeg?auto=compress&cs=tinysrgb&w=800",
-    technologies: ["React", "D3.js", "Express", "MongoDB"],
-    github: "https://github.com",
-    live: "https://example.com",
+      "https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800",
+    technologies: ["Flutter", "AndroidStudio"],
+    github: "https://github.com/Naflan-MNM/GPA-Calculator-Pro",
+    live: "https://www.linkedin.com/posts/naflan-mohammed_excited-to-introducegpa-calculator-pro-activity-7169395582388686849-pPoE?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD8GjgwB4RfDRAXUs_iHzK4murYbtVAtYr0",
     featured: false,
   },
 ];
@@ -178,7 +192,7 @@ function Projects() {
 
         {/* Overlay for Detail View (outside map!) */}
         {viewDetail && selectedProject && (
-          <div className="fixed inset-0 bg-gray-900/90 z-50 flex items-center justify-center p-6">
+          <div className="fixed inset-y-0 left-0 right-80 bg-gray-900/90 z-50 flex items-center justify-center p-6">
             <div className="relative max-w-2xl w-full bg-slate-800 rounded-2xl p-6 shadow-lg max-h-[90vh] overflow-y-auto">
               <button
                 className="absolute top-4 right-4 text-slate-400 hover:text-white transition"
