@@ -41,12 +41,12 @@ const socialLinks = [
   },
   {
     icon: Instagram,
-    href: "https://www.instagram.com/naflan_mnm", // replace with your actual link
+    href: "https://www.instagram.com/naflan_mnm",
     label: "Instagram",
   },
   {
     icon: Facebook,
-    href: "https://web.facebook.com/naflan.mohamednaflan", // replace with your actual link
+    href: "https://web.facebook.com/naflan.mohamednaflan",
     label: "Facebook",
   },
 ];
