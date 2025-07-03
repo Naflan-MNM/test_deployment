@@ -1,16 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ExternalLink, Github, ArrowRight } from "lucide-react";
 
 const projects = [
   {
-    title: "E-Commerce Platform",
+    title: "Gexmoo – Full-Stack E-commerce Web Application",
     description:
-      "A full-stack e-commerce solution built with React, Node.js, and PostgreSQL. Features include user authentication, payment processing, and admin dashboard.",
+      "Gexmoo is a fully functional e-commerce platform built with the MERN stack. The frontend, developed using React, Vite, and Tailwind CSS, offers a fast, responsive user experience with seamless navigation via React Router and real-time feedback using React Toastify. The backend is powered by Node.js, Express, and MongoDB, with Mongoose for data modeling. It features secure user authentication with JWT and bcrypt, image uploading via Multer, and cloud storage integration with Cloudinary. The system ensures robust form validation, environment management using dotenv, and cross-origin communication with CORS. Gexmoo is designed to be scalable and maintainable, with a modular structure and well-documented codebase.",
     image:
       "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800",
-    technologies: ["React", "Node.js", "PostgreSQL", "Stripe"],
-    github: "https://github.com",
-    live: "https://example.com",
+    technologies: [
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Express.js",
+      "bcryptjs",
+      "jsonwebtoken",
+      "validator",
+      "multer",
+      "cloudinary",
+      "dotenv",
+      "cors",
+    ],
+    github: "https://github.com/Naflan-MNM/seat-reservation-system---frontend-",
+    github1: "https://github.com/Naflan-MNM/seat-reservation-system---backend-",
+    live: "d",
     featured: true,
   },
   {
@@ -50,6 +63,8 @@ const projects = [
 
 function Projects() {
   const [showAll, setShowAll] = useState(false);
+  const [viewDetail, setViewDetail] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
 
   const handleToggle = () => {
     setShowAll((prev) => !prev);
@@ -99,14 +114,26 @@ function Projects() {
                   >
                     <Github size={20} />
                   </a>
-                  <a
-                    href={project.live}
-                    className="p-2 bg-blue-600/90 text-white rounded-full hover:bg-blue-700 transition-colors duration-200"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <ExternalLink size={20} />
-                  </a>
+                  {project.github1 && (
+                    <a
+                      href={project.github1}
+                      className="p-2 bg-slate-800/90 text-white rounded-full hover:bg-slate-700 transition-colors duration-200"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Github size={20} />
+                    </a>
+                  )}
+                  {project.live && (
+                    <a
+                      href={project.live}
+                      className="p-2 bg-blue-600/90 text-white rounded-full hover:bg-blue-700 transition-colors duration-200"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <ExternalLink size={20} />
+                    </a>
+                  )}
                 </div>
               </div>
 
@@ -115,7 +142,9 @@ function Projects() {
                   {project.title}
                 </h3>
                 <p className="text-slate-300 mb-4 leading-relaxed">
-                  {project.description}
+                  {project.description.length > 150
+                    ? project.description.slice(0, 150) + "..."
+                    : project.description}
                 </p>
 
                 <div className="flex flex-wrap gap-2 mb-4">
@@ -129,7 +158,13 @@ function Projects() {
                   ))}
                 </div>
 
-                <div className="flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-200 cursor-pointer">
+                <div
+                  className="flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-200 cursor-pointer"
+                  onClick={() => {
+                    setSelectedProject(project);
+                    setViewDetail(true);
+                  }}
+                >
                   <span className="text-sm font-medium">View Details</span>
                   <ArrowRight
                     size={16}
@@ -140,6 +175,72 @@ function Projects() {
             </div>
           ))}
         </div>
+
+        {/* Overlay for Detail View (outside map!) */}
+        {viewDetail && selectedProject && (
+          <div className="fixed inset-0 bg-gray-900/90 z-50 flex items-center justify-center p-6">
+            <div className="relative max-w-2xl w-full bg-slate-800 rounded-2xl p-6 shadow-lg max-h-[90vh] overflow-y-auto">
+              <button
+                className="absolute top-4 right-4 text-slate-400 hover:text-white transition"
+                onClick={() => setViewDetail(false)}
+              >
+                ✕
+              </button>
+
+              <h3 className="text-2xl font-semibold text-white mb-4">
+                {selectedProject.title}
+              </h3>
+
+              <p className="text-slate-300 mb-6 leading-relaxed">
+                {selectedProject.description}
+              </p>
+
+              <div className="flex flex-wrap gap-2 mb-6">
+                {selectedProject.technologies.map((tech) => (
+                  <span
+                    key={tech}
+                    className="px-3 py-1 bg-slate-700/50 text-emerald-400 rounded-full text-xs font-medium"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              <div className="flex space-x-4">
+                {selectedProject.github && (
+                  <a
+                    href={selectedProject.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white hover:text-blue-400 transition"
+                  >
+                    <Github />
+                  </a>
+                )}
+                {selectedProject.github1 && (
+                  <a
+                    href={selectedProject.github1}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white hover:text-blue-400 transition"
+                  >
+                    <Github />
+                  </a>
+                )}
+                {selectedProject.live && (
+                  <a
+                    href={selectedProject.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white hover:text-blue-400 transition"
+                  >
+                    <ExternalLink />
+                  </a>
+                )}
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Toggle Button */}
         <div className="text-center mt-12">
