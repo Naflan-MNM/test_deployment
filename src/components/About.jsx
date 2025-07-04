@@ -64,14 +64,7 @@ function About() {
             </div>
 
             <div className="flex flex-wrap gap-3 pt-4">
-              {[
-                "React",
-                "JavaScript",
-                "Node.js",
-                "Python",
-                "AWS",
-                "PostgreSQL",
-              ].map((tech) => (
+              {["MongoDB", "React.js", "Node.js", "Express.js"].map((tech) => (
                 <span
                   key={tech}
                   className="px-4 py-2 bg-slate-800 text-emerald-400 rounded-full text-sm font-medium border border-slate-700"

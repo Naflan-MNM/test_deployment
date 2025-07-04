@@ -4,8 +4,9 @@ const skillCategories = [
   {
     title: "Frontend",
     skills: [
-      { name: "React/Next.js", level: 95 },
-      { name: "JavaScript", level: 90 },
+      { name: "React/Next.js", level: 90 },
+      { name: "JavaScript", level: 80 },
+      { name: "HTML/CSS", level: 85 },
       { name: "Tailwind CSS", level: 85 },
       { name: "Vue.js", level: 80 },
     ],
@@ -13,19 +14,23 @@ const skillCategories = [
   {
     title: "Backend",
     skills: [
-      { name: "Node.js", level: 90 },
-      { name: "Python", level: 85 },
-      { name: "PostgreSQL", level: 80 },
-      { name: "MongoDB", level: 75 },
+      { name: "Node.js", level: 85 },
+      { name: "Express.js", level: 95 },
+      { name: "Spring Boot", level: 60 },
+      { name: "Java", level: 60 },
+      { name: "PostgreSQL", level: 75 },
+      { name: "MongoDB", level: 80 },
     ],
   },
   {
     title: "Tools & Others",
     skills: [
-      { name: "AWS/Cloud", level: 85 },
-      { name: "Docker", level: 80 },
+      { name: "Postman", level: 90 },
+      { name: "Azure/Azure DevOps", level: 60 },
+      { name: "AWS/Cloud", level: 60 },
       { name: "Git/GitHub", level: 95 },
-      { name: "Figma/Design", level: 70 },
+      { name: "Figma/Design", level: 80 },
+      { name: "Android Studio", level: 70 },
     ],
   },
 ];
@@ -35,7 +40,7 @@ function Skills() {
     <section id="skills" className="py-20 px-6 lg:px-12 bg-slate-800/30">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
             Skills & Expertise
           </h2>
@@ -89,15 +94,15 @@ function Skills() {
           <div className="flex flex-wrap justify-center gap-4">
             {[
               "GraphQL",
-              "Redis",
-              "Kubernetes",
-              "Terraform",
-              "Jenkins",
-              "Socket.io",
-              "Prisma",
-              "Stripe",
-              "Supabase",
-              "Vercel",
+              "React Native",
+              "Python",
+              "Java",
+              "PHP",
+              "C",
+              "C#",
+              "SQL",
+              "MySQL",
+              "NoSQL",
             ].map((tech) => (
               <span
                 key={tech}
