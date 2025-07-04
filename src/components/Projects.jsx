@@ -186,8 +186,8 @@ function Projects() {
         </div>
 
         {viewDetail && selectedProject && (
-          <div className="fixed inset-y-0 left-0 right-80 bg-gray-900/90 z-50 flex items-center justify-center p-6">
-            <div className="relative max-w-2xl w-full bg-slate-800 rounded-2xl p-6 shadow-lg max-h-[90vh] overflow-y-auto">
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-gray-900/90 lg:inset-y-0 lg:left-0 lg:right-80 lg:items-stretch">
+            <div className="relative w-full max-w-2xl bg-slate-800 rounded-2xl p-6 shadow-lg max-h-[90vh] overflow-y-auto">
               <button
                 className="absolute top-4 right-4 text-slate-400 hover:text-white transition"
                 onClick={() => setViewDetail(false)}

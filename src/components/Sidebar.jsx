@@ -17,7 +17,7 @@ const navigationItems = [
   { id: "hero", label: "Home", icon: Home },
   { id: "about", label: "About", icon: User },
   { id: "education", label: "Educations", icon: BookOpen },
-  /* { id: "certifications", label: "Certifications", icon: Award }, */
+  // { id: "certifications", label: "Certifications", icon: Award },
   { id: "skills", label: "Skills", icon: Code },
   { id: "projects", label: "Projects", icon: Briefcase },
   { id: "experience", label: "Experience", icon: Calendar },
@@ -42,16 +42,21 @@ function Sidebar({ activeSection, onNavigate, isMobileOpen }) {
   return (
     <aside
       className={`
-      fixed top-0 right-0 h-full w-80 bg-slate-800/95 backdrop-blur-lg border-l border-slate-700/50 z-50
-      transform transition-transform duration-300 ease-in-out
-      ${isMobileOpen ? "translate-x-0" : "translate-x-full lg:translate-x-0"}
-    `}
+        fixed top-0 right-0 h-full w-80 bg-slate-800/95 backdrop-blur-lg border-l border-slate-700/50 z-50
+        transform transition-transform duration-300 ease-in-out
+        ${isMobileOpen ? "translate-x-0" : "translate-x-full lg:translate-x-0"}
+        overflow-y-auto hide-scrollbar
+      `}
     >
-      <div className="flex flex-col  p-8">
+      <div className="flex flex-col p-8 min-h-full">
         {/* Profile Section */}
         <div className="text-center mb-4">
-          <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-emerald-500 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl font-bold">
-            NM
+          <div className="w-[11rem] h-[11rem] mx-auto mb-4 rounded-full overflow-hidden border-2 border-blue-500 shadow-lg">
+            <img
+              src="/Portfolio/profile.jpg"
+              alt="Naflan Mohammed"
+              className="w-full h-full object-cover"
+            />
           </div>
           <h2 className="text-xl font-semibold text-white">Naflan Mohammed</h2>
           <p className="text-slate-400 text-sm mt-1">Full Stack Developer</p>
