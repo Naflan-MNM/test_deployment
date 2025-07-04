@@ -18,13 +18,23 @@ const certifications = [
 
 const Certifications = () => {
   return (
-    <section id="certifications" className="py-10 px-5 bg-gray-950 text-white">
-      <h2 className="text-3xl font-bold mb-6">Certifications</h2>
+    <section id="certifications" className="py-20 px-6 lg:px-12">
+      {/* Section Header */}
+      <div className="text-center mb-16">
+        <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
+          Certifications
+        </h2>
+        <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-emerald-400 mx-auto rounded-full"></div>
+        <p className="text-slate-300 text-lg mt-6 max-w-2xl mx-auto">
+          Here are some of the certifications I have earned to enhance my skills
+          and expertise.
+        </p>
+      </div>
       <div className="space-y-4">
         {certifications.map((cert, index) => (
           <div
             key={index}
-            className="flex items-center bg-gray-800 p-4 rounded-xl shadow-md"
+            className="flex items-center bg-slate-800/50 p-4 rounded-xl shadow-md"
           >
             <CheckCircle className="text-green-500 mr-3" />
             <div>

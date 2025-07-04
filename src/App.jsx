@@ -7,7 +7,7 @@ import Projects from "./components/Projects";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 import Education from "./components/Education";
-import Certifications from "./components/Certifications";
+/* import Certifications from "./components/Certifications"; */
 import { Menu, X } from "lucide-react";
 
 function App() {
@@ -86,7 +86,7 @@ function App() {
         <Hero />
         <About />
         <Education />
-        <Certifications />
+        {/* <Certifications /> */}
         <Skills />
         <Projects />
         <Experience />

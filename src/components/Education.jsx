@@ -10,7 +10,7 @@ const educationData = [
     gpa: "GPA: 3.61",
   },
   {
-    degree: "G.C.E. Advanced Level",
+    degree: "G.C.E. Advanced Level - Technology Stream",
     institution: "MT/Ajmeer National School",
     duration: "2017 - 2019",
     gpa: "Z-Score: 1.8",
@@ -28,12 +28,12 @@ const Education = () => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
-            Education
+            Educations
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-emerald-400 mx-auto rounded-full"></div>
         </div>
 
-        <div className="space-y-6">
+        <div className="space-y-6 ">
           {educationData.map((edu, index) => (
             <motion.div
               key={index}
@@ -43,7 +43,7 @@ const Education = () => {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               whileHover={{ scale: 1.01 }}
-              className="bg-gray-800 p-6 rounded-xl "
+              className="bg-slate-800/50 p-6 rounded-xl "
             >
               <h3 className="text-xl font-semibold text-white">{edu.degree}</h3>
 

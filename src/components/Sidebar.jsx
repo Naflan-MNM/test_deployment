@@ -16,8 +16,8 @@ import {
 const navigationItems = [
   { id: "hero", label: "Home", icon: Home },
   { id: "about", label: "About", icon: User },
-  { id: "education", label: "Education", icon: BookOpen },
-  { id: "certifications", label: "Certifications", icon: Award },
+  { id: "education", label: "Educations", icon: BookOpen },
+  /* { id: "certifications", label: "Certifications", icon: Award }, */
   { id: "skills", label: "Skills", icon: Code },
   { id: "projects", label: "Projects", icon: Briefcase },
   { id: "experience", label: "Experience", icon: Calendar },

@@ -1,5 +1,5 @@
 import React from "react";
-import { Calendar, MapPin, Building } from "lucide-react";
+import { Calendar, MapPin, Building, Download } from "lucide-react";
 
 const experiences = [
   {
@@ -152,10 +152,15 @@ function Experience() {
 
         {/* Download Resume */}
         <div className="text-center mt-16">
-          <button className="bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 flex items-center gap-2 mx-auto">
-            <Calendar size={20} />
-            Download Full Resume
-          </button>
+          <a
+            href="/Portfolio/naflan-resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex max-w-xs w-full justify-center items-center bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 gap-2 mx-auto"
+          >
+            <Download size={30} />
+            <span>Download Full Resume</span>
+          </a>
         </div>
       </div>
     </section>
