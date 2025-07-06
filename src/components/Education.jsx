@@ -7,7 +7,7 @@ const educationData = [
     degree: "BICT Hons Special In Software Engineering",
     institution: "University of Sri Jayewardenepura",
     duration: "2021 - 2025",
-    gpa: "GPA: 3.61",
+    gpa: "GPA: 3.47",
   },
   {
     degree: "G.C.E. Advanced Level - Technology Stream",

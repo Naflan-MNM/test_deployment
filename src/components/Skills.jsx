@@ -6,9 +6,14 @@ const skillCategories = [
     skills: [
       { name: "React/Next.js", level: 90 },
       { name: "JavaScript", level: 80 },
-      { name: "HTML/CSS", level: 85 },
+      { name: "TypeScript", level: 70 },
+      { name: "HTML5/CSS3", level: 90 },
+      { name: "SASS/SCSS", level: 80 },
+      { name: "PostCSS", level: 80 },
+      { name: "React Native", level: 80 },
       { name: "Tailwind CSS", level: 85 },
-      { name: "Vue.js", level: 80 },
+      { name: "Bootstrap", level: 70 },
+      { name: "Vite", level: 90 },
     ],
   },
   {
@@ -18,8 +23,14 @@ const skillCategories = [
       { name: "Express.js", level: 95 },
       { name: "Spring Boot", level: 60 },
       { name: "Java", level: 60 },
+      { name: "JWT", level: 60 },
+      { name: "REST API", level: 90 },
+      { name: "GraphQL", level: 80 },
+      { name: "Passport.js", level: 80 },
       { name: "PostgreSQL", level: 75 },
       { name: "MongoDB", level: 80 },
+      { name: "CORS", level: 80 },
+      { name: "dotenv", level: 80 },
     ],
   },
   {
@@ -31,6 +42,12 @@ const skillCategories = [
       { name: "Git/GitHub", level: 95 },
       { name: "Figma/Design", level: 80 },
       { name: "Android Studio", level: 70 },
+      { name: "Expo", level: 80 },
+      { name: "VS Code/VS Studio", level: 80 },
+      { name: "Selenium", level: 60 },
+      { name: "Eclipse", level: 65 },
+      { name: "IntelliJ", level: 65 },
+      { name: "Bitbucket", level: 70 },
     ],
   },
 ];
@@ -93,16 +110,18 @@ function Skills() {
           </h3>
           <div className="flex flex-wrap justify-center gap-4">
             {[
-              "GraphQL",
-              "React Native",
               "Python",
-              "Java",
               "PHP",
               "C",
               "C#",
               "SQL",
               "MySQL",
               "NoSQL",
+              "GPT-3.5-turbo",
+              "LangChain",
+              "RAG Architecture",
+              "Prompt Engineering",
+              "LLM",
             ].map((tech) => (
               <span
                 key={tech}
