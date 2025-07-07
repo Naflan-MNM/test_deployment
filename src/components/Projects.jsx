@@ -76,7 +76,7 @@ const projects = [
       "Git",
       "GitHub",
     ],
-    github: "",
+    github: "https://github.com/sankadslt/debt-recovery-frontend/tree/main",
     live: "",
     featured: false,
   },
