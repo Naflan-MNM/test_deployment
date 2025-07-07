@@ -1,9 +1,34 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { ExternalLink, Github, ArrowRight } from "lucide-react";
 
 const projects = [
   {
-    title: "Gexmoo – Full-Stack E-commerce Web Application",
+    title: "Seat Reservation System",
+    description:
+      "The Seat Reservation System is a full-stack web application designed to manage seat bookings within an organization. Built using React.js on the frontend and Node.js/Express on the backend, the system enables employees or trainees to book, cancel, and manage seat reservations based on their assigned working floor. The frontend interface is rich with features such as a date picker, drag-and-drop seat allocation, QR code generation for check-ins, and export functionalities for reports in PDF and CSV formats. Authentication is handled via Google Sign-In using OAuth2, and task-critical emails like confirmations and cancellations are sent via Nodemailer. On the backend, MongoDB is used to persist booking data, and sessions are managed securely using express-session. Admin users have capabilities to view seat usage, manage holidays, and export attendance records. This project gave me in-depth experience with integrating complex frontend components and building secure, scalable backend APIs for enterprise use.",
+    image: "/Portfolio/images/srs_ui.png",
+    technologies: [
+      "React",
+      "Axios",
+      "Express",
+      "MongoDB",
+      "Nodemailer",
+      "Google Auth",
+      "REST APIs",
+      "React Router",
+      "Material UI",
+      "Express Session",
+      "JWT",
+      "Passport",
+      "Nodemailer",
+    ],
+    github: "https://github.com/Naflan-MNM/seat-reservation-system---frontend-",
+    github1: "https://github.com/Naflan-MNM/seat-reservation-system---backend-",
+    live: "https://www.linkedin.com/posts/naflan-mohammed_demo-video-seat-reservation-system-in-activity-7330520524428587008-kZjE?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD8GjgwB4RfDRAXUs_iHzK4murYbtVAtYr0",
+    featured: true,
+  },
+  {
+    title: "Gexmoo – E-commerce Web Application",
     description:
       "Gexmoo is a fully functional e-commerce platform built with the MERN stack. The frontend, developed using React, Vite, and Tailwind CSS, offers a fast, responsive user experience with seamless navigation via React Router and real-time feedback using React Toastify. The backend is powered by Node.js, Express, and MongoDB, with Mongoose for data modeling. It features secure user authentication with JWT and bcrypt, image uploading via Multer, and cloud storage integration with Cloudinary. The system ensures robust form validation, environment management using dotenv, and cross-origin communication with CORS. Gexmoo is designed to be scalable and maintainable, with a modular structure and well-documented codebase.",
     image:
@@ -21,42 +46,74 @@ const projects = [
       "dotenv",
       "cors",
     ],
-    github: "https://github.com/Naflan-MNM/seat-reservation-system---frontend-",
-    github1: "https://github.com/Naflan-MNM/seat-reservation-system---backend-",
-    live: "d",
+    github: "https://github.com/Naflan-MNM/GeXMoo",
+    live: "",
     featured: true,
   },
   {
-    title: "Task Management App",
+    title: "To-Do List Web App",
     description:
-      "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
+      "This is a responsive and user-friendly To-Do List web application developed using React and Material UI. It allows users to efficiently manage their daily tasks through a clean and modern interface. Key features include the ability to add, edit, and delete tasks, mark tasks as complete or incomplete, filter tasks based on their completion status, and search for tasks using keywords. The application also uses the browser’s local storage to ensure data persistence across sessions. Through this project, I gained practical experience in React component design, state management, and UI integration with Material UI. Additionally, I strengthened my skills in implementing reusable components and managing client-side storage for improved scalability and user experience.",
     image:
       "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=800",
-    technologies: ["Next.js", "JavaScript", "Supabase", "Socket.io"],
-    github: "https://github.com",
-    live: "https://example.com",
-    featured: true,
-  },
-  {
-    title: "Weather Dashboard",
-    description:
-      "A responsive weather dashboard that displays current conditions, forecasts, and weather maps with a beautiful, intuitive interface.",
-    image:
-      "https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800",
-    technologies: ["Vue.js", "Tailwind", "Weather API"],
-    github: "https://github.com",
-    live: "https://example.com",
+    technologies: ["React.JS", "JavaScript", "HTML", "Pure CSS"],
+    github: "https://github.com/Naflan-MNM/To-Do-List",
+    live: "https://www.linkedin.com/posts/naflan-mohammed_webdevelopment-fullstack-todolist-activity-7215244149212499968-GrOP?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD8GjgwB4RfDRAXUs_iHzK4murYbtVAtYr0",
     featured: false,
   },
   {
-    title: "Social Media Analytics",
+    title: "DeptX – Internal Debt Recovery System",
     description:
-      "An analytics dashboard for social media managers to track engagement, growth, and performance across multiple platforms.",
+      "DeptX is a web-based internal system developed to digitize and streamline the debt recovery process for enterprise operations. Built using React.js and Tailwind CSS, this system enhances operational transparency and record accuracy. I was responsible for implementing the DRC section and Incident Detail section, developing over 8 reusable components. I collaborated closely with backend developers to ensure clean API integrations and focused on building responsive, scalable UI layouts. Features include searchable debt records, incident logging, filtering by categories, and dashboard-style views. The project was developed under SLT Mobitel’s internal systems and includes GitHub-based version control and testing workflows.",
     image:
-      "https://images.pexels.com/photos/590020/pexels-photo-590020.jpeg?auto=compress&cs=tinysrgb&w=800",
-    technologies: ["React", "D3.js", "Express", "MongoDB"],
-    github: "https://github.com",
-    live: "https://example.com",
+      "https://images.pexels.com/photos/6693655/pexels-photo-6693655.jpeg?auto=compress&cs=tinysrgb&w=800", // Placeholder image
+    technologies: [
+      "React.js",
+      "JavaScript",
+      "Tailwind CSS",
+      "Axios",
+      "REST API",
+      "Git",
+      "GitHub",
+    ],
+    github: "https://github.com/sankadslt/debt-recovery-frontend/tree/main",
+    live: "",
+    featured: false,
+  },
+  {
+    title: "CEYWAY – AI-Powered Travel Planning App",
+    description:
+      "CEYWAY is a mobile application that uses AI to generate personalized multi-day travel itineraries across Sri Lanka. Built using React Native with Expo for the frontend and Spring Boot for the backend, the app lets users select a starting point and destination, then generates on-the-way attractions and day-wise travel plans using a Retrieval-Augmented Generation (RAG) approach integrated with GPT-3.5-turbo. It supports interactive location selection via OpenStreetMap's Nominatim API, dynamic destination suggestions, and real-time updates. Core features include AI-generated itineraries grouped by date, trending destination recommendations, contextual user preferences, and trip detail screens. The app uses Context API for state management, and the backend includes AI integration, vector store retrieval, and prompt engineering.",
+    image: "/Portfolio/images/ceyway.jpg",
+    technologies: [
+      "React Native",
+      "Expo",
+      "Spring Boot",
+      "OpenStreetMap API",
+      "React Navigation",
+      "Axios",
+      "Context API",
+      "RAG Architecture",
+      "GPT-3.5-turbo",
+      "LangChain",
+      "Pinecone",
+      "RESTful API",
+      "Figma",
+      "Framer Motion",
+    ],
+    github: "https://github.com/Naflan-MNM/CEYWAY",
+    live: "",
+    featured: false,
+  },
+  {
+    title: " GPA Calculator Pro – University of Sri Jayewardenepura",
+    description:
+      "GPA Calculator Pro is a mobile application developed using Flutter and Android Studio, specifically designed for students of the University of Sri Jayewardenepura. This app simplifies the process of calculating Grade Point Averages (GPA) and Cumulative GPA (CGPA) based on the university's unique grading system and academic structure. With an intuitive user interface and seamless performance, students can easily input their subject grades, credit values, and calculate accurate results instantly. The app supports semester-wise calculations, real-time GPA updates, and error handling to ensure data accuracy. It also provides options to save, reset, and review results for academic planning. This project enhanced my skills in cross-platform mobile development, state management in Flutter, and designing user-centric educational tools. It was built with a focus on usability, precision, and alignment with university policies, making it a valuable utility for fellow undergraduates..",
+    image:
+      "https://images.pexels.com/photos/4386361/pexels-photo-4386361.jpeg?auto=compress&cs=tinysrgb&w=800",
+    technologies: ["Flutter", "AndroidStudio"],
+    github: "https://github.com/Naflan-MNM/GPA-Calculator-Pro",
+    live: "https://www.linkedin.com/posts/naflan-mohammed_excited-to-introducegpa-calculator-pro-activity-7169395582388686849-pPoE?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD8GjgwB4RfDRAXUs_iHzK4murYbtVAtYr0",
     featured: false,
   },
 ];
@@ -66,9 +123,7 @@ function Projects() {
   const [viewDetail, setViewDetail] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
 
-  const handleToggle = () => {
-    setShowAll((prev) => !prev);
-  };
+  const handleToggle = () => setShowAll((prev) => !prev);
 
   const displayedProjects = showAll
     ? projects
@@ -77,7 +132,6 @@ function Projects() {
   return (
     <section id="projects" className="py-20 px-6 lg:px-12">
       <div className="max-w-6xl mx-auto">
-        {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
             Featured Projects
@@ -89,7 +143,6 @@ function Projects() {
           </p>
         </div>
 
-        {/* Projects Grid */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           {displayedProjects.map((project, index) => (
             <div
@@ -104,16 +157,17 @@ function Projects() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
 
-                {/* Overlay Links */}
                 <div className="absolute top-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <a
-                    href={project.github}
-                    className="p-2 bg-slate-800/90 text-white rounded-full hover:bg-slate-700 transition-colors duration-200"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Github size={20} />
-                  </a>
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      className="p-2 bg-slate-800/90 text-white rounded-full hover:bg-slate-700 transition-colors duration-200"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Github size={20} />
+                    </a>
+                  )}
                   {project.github1 && (
                     <a
                       href={project.github1}
@@ -148,9 +202,9 @@ function Projects() {
                 </p>
 
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.map((tech) => (
+                  {project.technologies.map((tech, i) => (
                     <span
-                      key={tech}
+                      key={`${tech}-${i}`}
                       className="px-3 py-1 bg-slate-700/50 text-emerald-400 rounded-full text-xs font-medium"
                     >
                       {tech}
@@ -176,10 +230,9 @@ function Projects() {
           ))}
         </div>
 
-        {/* Overlay for Detail View (outside map!) */}
         {viewDetail && selectedProject && (
-          <div className="fixed inset-0 bg-gray-900/90 z-50 flex items-center justify-center p-6">
-            <div className="relative max-w-2xl w-full bg-slate-800 rounded-2xl p-6 shadow-lg max-h-[90vh] overflow-y-auto">
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-gray-900/90 lg:inset-y-0 lg:left-0 lg:right-80 lg:items-stretch">
+            <div className="relative w-full max-w-2xl bg-slate-800 rounded-2xl p-6 shadow-lg max-h-[90vh] overflow-y-auto">
               <button
                 className="absolute top-4 right-4 text-slate-400 hover:text-white transition"
                 onClick={() => setViewDetail(false)}
@@ -196,9 +249,9 @@ function Projects() {
               </p>
 
               <div className="flex flex-wrap gap-2 mb-6">
-                {selectedProject.technologies.map((tech) => (
+                {selectedProject.technologies.map((tech, i) => (
                   <span
-                    key={tech}
+                    key={`${tech}-${i}`}
                     className="px-3 py-1 bg-slate-700/50 text-emerald-400 rounded-full text-xs font-medium"
                   >
                     {tech}
@@ -242,7 +295,6 @@ function Projects() {
           </div>
         )}
 
-        {/* Toggle Button */}
         <div className="text-center mt-12">
           <button
             onClick={handleToggle}
