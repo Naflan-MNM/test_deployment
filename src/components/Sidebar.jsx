@@ -11,6 +11,7 @@ import {
   Instagram,
   BookOpen,
   Award,
+  Hammer,
 } from "lucide-react";
 
 const navigationItems = [
@@ -19,6 +20,7 @@ const navigationItems = [
   { id: "education", label: "Educations", icon: BookOpen },
   // { id: "certifications", label: "Certifications", icon: Award },
   { id: "skills", label: "Skills", icon: Code },
+  { id: "services", label: "Services", icon: Hammer },
   { id: "projects", label: "Projects", icon: Briefcase },
   { id: "experience", label: "Experience", icon: Calendar },
   { id: "contact", label: "Contact", icon: Mail },
