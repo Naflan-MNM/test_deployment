@@ -13,7 +13,6 @@ const skillCategories = [
       { name: "React Native", level: 80 },
       { name: "Tailwind CSS", level: 85 },
       { name: "Bootstrap", level: 70 },
-      { name: "Vite", level: 90 },
     ],
   },
   {
@@ -26,11 +25,8 @@ const skillCategories = [
       { name: "JWT", level: 60 },
       { name: "REST API", level: 90 },
       { name: "GraphQL", level: 80 },
-      { name: "Passport.js", level: 80 },
       { name: "PostgreSQL", level: 75 },
       { name: "MongoDB", level: 80 },
-      { name: "CORS", level: 80 },
-      { name: "dotenv", level: 80 },
     ],
   },
   {
@@ -42,19 +38,16 @@ const skillCategories = [
       { name: "Git/GitHub", level: 95 },
       { name: "Figma/Design", level: 80 },
       { name: "Android Studio", level: 70 },
-      { name: "Expo", level: 80 },
       { name: "VS Code/VS Studio", level: 80 },
       { name: "Selenium", level: 60 },
-      { name: "Eclipse", level: 65 },
       { name: "IntelliJ", level: 65 },
-      { name: "Bitbucket", level: 70 },
     ],
   },
 ];
 
 function Skills() {
   return (
-    <section id="skills" className="py-20 px-6 lg:px-12 bg-slate-800/30">
+    <section id="skills" className="py-10 px-6 lg:px-12 bg-slate-800/30">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-10">
@@ -78,7 +71,7 @@ function Skills() {
                 {category.title}
               </h3>
 
-              <div className="space-y-6">
+              <div className="space-y-4">
                 {category.skills.map((skill, skillIndex) => (
                   <div key={skillIndex} className="skill-item">
                     <div className="flex justify-between items-center mb-2">
@@ -90,7 +83,7 @@ function Skills() {
                       </span>
                     </div>
 
-                    <div className="w-full bg-slate-700 rounded-full h-2 overflow-hidden">
+                    <div className="w-full bg-slate-700 rounded-full h-1 overflow-hidden">
                       <div
                         className="h-full bg-gradient-to-r from-blue-500 to-emerald-500 rounded-full transition-all duration-1000 ease-out skill-bar"
                         style={{ width: `${skill.level}%` }}

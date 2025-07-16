@@ -137,10 +137,10 @@ function Experience() {
         {/* Timeline */}
         <div className="relative">
           {/* Timeline Line */}
-          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 to-emerald-500 transform md:-translate-x-0.5"></div>
+          <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 to-emerald-500 transform md:-translate-x-0.5"></div>
 
           {/* Experience Items */}
-          <div className="space-y-12">
+          <div className="space-y-6">
             {experiences.map((exp, index) => (
               <div
                 key={index}
@@ -149,17 +149,17 @@ function Experience() {
                 } justify-start`}
               >
                 {/* Timeline Dot */}
-                <div className="absolute left-2 md:left-1/2 w-4 h-4 bg-gradient-to-r from-blue-500 to-emerald-500 rounded-full transform md:-translate-x-2 z-10 border-4 border-slate-900"></div>
+                <div className="absolute left-0 md:left-1/2 w-4 h-4 bg-gradient-to-r from-blue-500 to-emerald-500 rounded-full transform md:-translate-x-2 z-10 border-4 border-slate-900"></div>
 
                 {/* Content Card */}
                 <div
-                  className={`ml-12 md:ml-0 md:w-5/12 ${
+                  className={`ml-6 md:ml-0 md:w-5/12 ${
                     index % 2 === 0
                       ? "md:mr-auto md:pr-8"
                       : "md:ml-auto md:pl-8"
                   }`}
                 >
-                  <div className="bg-slate-800/50 backdrop-blur-sm p-6 rounded-2xl border border-slate-700/50 hover:border-blue-500/30 transition-all duration-300 hover:transform hover:scale-105">
+                  <div className="bg-slate-800/50 backdrop-blur-sm p-2 md:p-6 rounded-2xl border border-slate-700/50 hover:border-blue-500/30 transition-all duration-300 hover:transform hover:scale-105">
                     {/* Header */}
                     <div className="mb-4">
                       <div className="flex items-center gap-2 text-emerald-400 text-sm mb-1">

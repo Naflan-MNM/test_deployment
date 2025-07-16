@@ -7,6 +7,7 @@ import Projects from "./components/Projects";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 import Education from "./components/Education";
+import Services from "./components/Services";
 /* import Certifications from "./components/Certifications"; */
 import { Menu, X } from "lucide-react";
 
@@ -88,6 +89,7 @@ function App() {
         <Education />
         {/* <Certifications /> */}
         <Skills />
+        <Services />
         <Projects />
         <Experience />
         <Contact />
