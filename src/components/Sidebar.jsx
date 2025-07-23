@@ -10,7 +10,6 @@ import {
   Linkedin,
   Instagram,
   BookOpen,
-  Award,
   Hammer,
 } from "lucide-react";
 
