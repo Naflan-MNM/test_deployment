@@ -35,6 +35,13 @@ function About() {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-emerald-400 mx-auto rounded-full"></div>
         </div>
+        <div className="lg:hidden flex justify-center mb-3">
+          <img
+            src="/Portfolio/profile.jpg"
+            alt="Naflan Mohammed"
+            className="w-full object-contain shadow object-center md:h-96 md:w-96 rounded-2xl md:rounded-xl bg-red-200"
+          />
+        </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
