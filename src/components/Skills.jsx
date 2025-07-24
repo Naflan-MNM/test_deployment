@@ -4,38 +4,53 @@ const skillCategories = [
   {
     title: "Frontend",
     skills: [
-      { name: "React/Next.js", level: 95 },
-      { name: "JavaScript", level: 90 },
+      { name: "React/Next.js", level: 90 },
+      { name: "JavaScript", level: 80 },
+      { name: "TypeScript", level: 70 },
+      { name: "HTML5/CSS3", level: 90 },
+      { name: "SASS/SCSS", level: 80 },
+      { name: "PostCSS", level: 80 },
+      { name: "React Native", level: 80 },
       { name: "Tailwind CSS", level: 85 },
-      { name: "Vue.js", level: 80 },
+      { name: "Bootstrap", level: 70 },
     ],
   },
   {
     title: "Backend",
     skills: [
-      { name: "Node.js", level: 90 },
-      { name: "Python", level: 85 },
-      { name: "PostgreSQL", level: 80 },
-      { name: "MongoDB", level: 75 },
+      { name: "Node.js", level: 85 },
+      { name: "Express.js", level: 95 },
+      { name: "Spring Boot", level: 60 },
+      { name: "Java", level: 60 },
+      { name: "JWT", level: 60 },
+      { name: "REST API", level: 90 },
+      { name: "GraphQL", level: 80 },
+      { name: "PostgreSQL", level: 75 },
+      { name: "MongoDB", level: 80 },
     ],
   },
   {
     title: "Tools & Others",
     skills: [
-      { name: "AWS/Cloud", level: 85 },
-      { name: "Docker", level: 80 },
+      { name: "Postman", level: 90 },
+      { name: "Azure/Azure DevOps", level: 60 },
+      { name: "AWS/Cloud", level: 60 },
       { name: "Git/GitHub", level: 95 },
-      { name: "Figma/Design", level: 70 },
+      { name: "Figma/Design", level: 80 },
+      { name: "Android Studio", level: 70 },
+      { name: "VS Code/VS Studio", level: 80 },
+      { name: "Selenium", level: 60 },
+      { name: "IntelliJ", level: 65 },
     ],
   },
 ];
 
 function Skills() {
   return (
-    <section id="skills" className="py-20 px-6 lg:px-12 bg-slate-800/30">
+    <section id="skills" className="py-10 px-6 lg:px-12 bg-slate-800/30">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
             Skills & Expertise
           </h2>
@@ -56,7 +71,7 @@ function Skills() {
                 {category.title}
               </h3>
 
-              <div className="space-y-6">
+              <div className="space-y-4">
                 {category.skills.map((skill, skillIndex) => (
                   <div key={skillIndex} className="skill-item">
                     <div className="flex justify-between items-center mb-2">
@@ -68,7 +83,7 @@ function Skills() {
                       </span>
                     </div>
 
-                    <div className="w-full bg-slate-700 rounded-full h-2 overflow-hidden">
+                    <div className="w-full bg-slate-700 rounded-full h-1 overflow-hidden">
                       <div
                         className="h-full bg-gradient-to-r from-blue-500 to-emerald-500 rounded-full transition-all duration-1000 ease-out skill-bar"
                         style={{ width: `${skill.level}%` }}
@@ -88,16 +103,18 @@ function Skills() {
           </h3>
           <div className="flex flex-wrap justify-center gap-4">
             {[
-              "GraphQL",
-              "Redis",
-              "Kubernetes",
-              "Terraform",
-              "Jenkins",
-              "Socket.io",
-              "Prisma",
-              "Stripe",
-              "Supabase",
-              "Vercel",
+              "Python",
+              "PHP",
+              "C",
+              "C#",
+              "SQL",
+              "MySQL",
+              "NoSQL",
+              "GPT-3.5-turbo",
+              "LangChain",
+              "RAG Architecture",
+              "Prompt Engineering",
+              "LLM",
             ].map((tech) => (
               <span
                 key={tech}

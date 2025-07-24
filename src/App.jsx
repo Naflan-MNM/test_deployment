@@ -6,6 +6,9 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
+import Education from "./components/Education";
+import Services from "./components/Services";
+/* import Certifications from "./components/Certifications"; */
 import { Menu, X } from "lucide-react";
 
 function App() {
@@ -17,7 +20,9 @@ function App() {
       const sections = [
         "hero",
         "about",
+        "education",
         "skills",
+        "services",
         "projects",
         "experience",
         "contact",
@@ -82,7 +87,10 @@ function App() {
       <main className="lg:mr-80">
         <Hero />
         <About />
+        <Education />
+        {/* <Certifications /> */}
         <Skills />
+        <Services />
         <Projects />
         <Experience />
         <Contact />

@@ -35,6 +35,13 @@ function About() {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-emerald-400 mx-auto rounded-full"></div>
         </div>
+        <div className="lg:hidden flex justify-center mb-3">
+          <img
+            src="/Portfolio/profile.jpg"
+            alt="Naflan Mohammed"
+            className="w-full object-contain shadow object-center md:h-96 md:w-96 rounded-2xl md:rounded-xl bg-red-200"
+          />
+        </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
@@ -43,7 +50,7 @@ function About() {
               <p className="text-slate-300 leading-relaxed">
                 Hi, I’m Naflan, a dedicated full-stack developer with a strong
                 background in building robust and scalable web and mobile
-                applications. With over 5 years of experience, I specialize in
+                applications. With over 3+ years of experience, I specialize in
                 the MERN stack (MongoDB, Express, React, Node.js) and have a
                 passion for crafting seamless user experiences and efficient
                 backend solutions.
@@ -64,14 +71,7 @@ function About() {
             </div>
 
             <div className="flex flex-wrap gap-3 pt-4">
-              {[
-                "React",
-                "JavaScript",
-                "Node.js",
-                "Python",
-                "AWS",
-                "PostgreSQL",
-              ].map((tech) => (
+              {["MongoDB", "React.js", "Node.js", "Express.js"].map((tech) => (
                 <span
                   key={tech}
                   className="px-4 py-2 bg-slate-800 text-emerald-400 rounded-full text-sm font-medium border border-slate-700"
@@ -110,7 +110,7 @@ function About() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-16 border-t border-slate-800">
           {[
             { number: "50+", label: "Projects Completed" },
-            { number: "2+", label: "Years Experience" },
+            { number: "3+", label: "Years Experience" },
             { number: "20+", label: "Happy Clients" },
             { number: "99%", label: "Success Rate" },
           ].map((stat, index) => (
